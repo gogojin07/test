@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원정보 찾기</title>
+    <style>
+        div {
+            text-align: center;
+            line-height: 50px;
+        }
+
+        h4 {
+            text-align: center;
+        }
+
+        img {
+            width: 70px;
+            margin-bottom: -20px;
+            padding-top: 30px;
+        }
+        span{
+            font-size: 40px;
+            font-style: italic;
+            font-family: fantasy;
+        }
+        
+        .myButton:hover {
+            background: linear-gradient(to bottom, #000407 5%, #01070a 100%);
+            background-color: #010407;
+        }
+
+        .myButton:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .myButton {
+            box-shadow: inset 0px -3px 7px 0px white;
+            background: linear-gradient(to bottom, white, black);
+            background-color: #2dabf9;
+            border-radius: 3px;
+            border: 1px solid white;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 15px;
+            padding: 9px 23px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #263666;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <img src="img/Logo.jpg" alt="logo" onclick="home()"><span>T-FARM</span>
+        </div>
+
+    </header>
+    <h4>회원정보 찾기</h4>
+    <div>
+
+        <div class="chooseRadio">
+            <input type="radio" id="search1" name="searchAll" onclick="search(1)" checked>ID
+
+            <input type="radio" id="search2" name="searchAll" onclick="search(2)">PASSWORD
+        </div>
+        <div id="searchIdInfo">
+            Name : <input id="userName" type="text"><br>
+            E-mail : <input id="userEmail" type="text">
+
+        </div>
+        <div id="searchPwdInfo" style="display: none;">
+            ID : <input id="userID" type="text"><br>
+            E-mail : <input id="userEmail2" type="text">
+        </div>
+        <div id="submitId">
+            <button class="myButton" id="submitIdInfo" onclick="submitIdInfoBtn()">confirm</button>
+            <button type="button" class="myButton" onclick="join()">회원가입</button>
+        </div>
+        <div id="submitPw" style="display: none;">
+            <button class="myButton" id="submitPwInfo" onclick="submitPwInfoBtn()">confirm</button>
+            <button type="button" class="myButton" onclick="join()">회원가입</button>
+        </div>
+
+    </div>
+    
+    <script>
+        function search(num) {
+            if (num == '1') {
+                document.getElementById("searchIdInfo").style.display = "";
+                document.getElementById("searchPwdInfo").style.display = "none";
+                document.getElementById("submitId").style.display = "";
+                document.getElementById("submitPw").style.display = "none";
+            } else {
+                document.getElementById("searchIdInfo").style.display = "none";
+                document.getElementById("searchPwdInfo").style.display = "";
+                document.getElementById("submitId").style.display = "none";
+                document.getElementById("submitPw").style.display = "";
+            }
+        }
+
+        function submitIdInfoBtn() {
+            var userName = document.getElementById("userName").value;
+            var userEmail = document.getElementById("userEmail").value;
+
+            if (userEmail == "" || userName == "") {
+                alert("정보를 모두 입력해주세요")
+            } else {
+                alert("성공!");
+            }
+        }
+
+        function submitPwInfoBtn() {
+            var userEmail2 = document.getElementById("userEmail2").value;
+            var userId = document.getElementById("userID").value;
+
+            if (userEmail2 == "" || userId == "") {
+                alert("정보를 모두 입력해주세요")
+            } else {
+                alert("성공!");
+            }
+        }
+        function home() {
+            location.assign('T_farm.html');
+        }
+        function join() {
+            location.assign('join2.html');
+        }
+        
+    </script>
+</body>
+
+</html>

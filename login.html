@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인 페이지</title>
+    <style>
+        h1{
+            font-size: 15px;
+        }
+        html{
+            text-align: center;
+        }
+        input{
+            width:400px;
+            height: 25px;
+            border: 1px solid black;
+            padding-left: 10px;
+        }
+        #id{font-size: 20px;}
+        #password{font-size: 20px;}
+        .font{font-size: 15px; }
+        .submit:hover {
+            background: linear-gradient(to bottom, #000407 5%, #01070a 100%);
+            background-color: #010407;
+        }
+        .submit:active {
+            position: relative;
+            top: 1px;
+        }
+        .submit { box-shadow: inset 0px -3px 7px 0px white;
+            background: linear-gradient(to bottom, white, black);
+            background-color: #2dabf9;
+            border-radius: 3px;
+            border: 1px solid white;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 10px;
+            padding: 9px 23px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #263666;
+            margin: 35px;}
+        img{width:70px; height: 70px; padding-top: 30px; margin-bottom: -20px;}
+        #logo{font-size: 40px; font-style: italic;
+            font-family: fantasy;}
+
+    </style>
+</head>
+<body>
+    <div id="logo">
+        <img src="img/Logo.jpg" alt="logo" onclick="home()"><span class="logo">T-FARM</span>
+    </div>
+    <br>
+    <h1 style="font-size: 30px;">LOGIN</h1>
+
+    <span class="font">ID</span>
+    <form id="idform">
+        <input type="text" name="id" id="id_" placeholder="ID 입력">
+    </form>
+    <br>
+    <span class="font">PASSWORD</span>
+    <form id="passform">
+        <input type="password" name="pass" id="pass_" placeholder="PW 입력">
+    </form>
+    <button type="button" class="submit" onclick="find()">회원찾기</button>
+    <button type="button" class="submit" onclick="login()">LOGIN</button>
+    <button type="button" class="submit" onclick="join()">회원가입</button>
+    
+
+    <script>
+        function login(){
+            var ID=document.getElementById('id_').value;
+            var pass=document.getElementById('pass_').value;
+            if(ID=="abcd" && pass=="1234"){
+                alert("LOGIN 성공");
+                location.assign('T_logined.html');
+            }
+            else{
+                alert("LOGIN 실패");
+            }
+        }
+        function find() {
+            location.assign('findID.html');
+        }
+        function home() {
+            location.assign('T_farm.html');
+        }
+        function join() {
+            location.assign('join2.html');
+        }
+
+    </script>
+</body>
+</html>

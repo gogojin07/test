@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T-farm</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        .top {
+            background-color: white;
+            position: relative;
+            left: 0;
+            padding: 0;
+            width: 100%;
+            height: 20px;
+            padding-top: 7px;
+        }
+
+        .top-menu {
+            display: inline;
+            list-style: none;
+        }
+
+        .top-menu li {
+            display: inline-block;
+            float: right;
+        }
+
+        p {
+            width: 50px;
+            height: 50px;
+            float: center;
+            margin: auto;
+            padding: auto;
+
+        }
+
+        #logo {
+            width: 100px;
+            height: 100px;
+        }
+
+        #menu {
+            text-align: center;
+            margin-top: 5px;
+        }
+
+        .Down {
+            float: left;
+            margin-top: 10px;
+            margin-bottom: 30px;
+            margin-left: 180px;
+            margin-right: 180px;
+        }
+
+        .Down li {
+            list-style-type: none;
+            visibility: hidden;
+            text-align: left;
+        }
+
+        .wrapper {
+            margin: 0 auto;
+        }
+
+        .top p {
+            color: black;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: bold;
+        }
+
+        hr {
+            margin: 30px;
+        }
+
+        video {
+            max-width: 80%;
+            display: block;
+            margin: 20px auto;
+        }
+
+        footer {
+            text-align: center;
+            margin: auto 0;
+            float: center;
+            font-size: 5px;
+            color: gray;
+        }
+
+        #searchBox {
+            text-align: center;
+            width: 50%;
+            height: 10%;
+            border-radius: 0;
+        }
+
+        .logoSun {
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body onload="popUp()">
+    <p class="logoSun">
+        <a href="#">
+            <img src="img/Logo.jpg" alt="T팜로고" id="logo">
+        </a>
+    </p>
+    <div class="top">
+        <div class="wrapper">
+            <ul class="top-menu">
+                <li><a href="T_farm.html">
+                       <p>EXIT</p>
+                    </a></li>
+                <li>
+                    <p>홍신고</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <hr>
+    <div id="menu">
+        <span id="T" class="Down">T-Shirt
+            <ul id="tmenu">
+                <li>
+                    MALE
+                </li>
+                <li>
+                    FEMALE
+                </li>
+                <li>
+                    KIDS
+                </li>
+            </ul>
+        </span>
+
+        <span id="P" class="Down">Pants
+            <ul id="pmenu" class="dmenu">
+                <li>
+                    MALE
+                </li>
+                <li>
+                    FEMALE
+                </li>
+                <li>
+                    KIDS
+                </li>
+            </ul>
+        </span>
+        <span id="L" class="Down">Help
+            <ul id="lmenu" class="dmenu">
+                <li id="map">
+                    오시는길
+                </li>
+                <li>
+                    고객문의
+                </li>
+                <li>
+                    구매후기
+                </li>
+            </ul>
+        </span>
+        <span>
+            <img src="img/돋보기.png" alt="돋보기" id="look" width="30px">
+        </span>
+        <input type="text" id="searchBox" width="1000px">
+    </div>
+
+
+    <video width="720" height="405" src="mp3/Youtube video y2kXWTnpfE4.mp4" frameborder="0" autoplay
+        allowfullscreen></video>
+
+    <footer>
+        <span>(주)T-farm/Business license:064251358/Mail:rlawngks007@naver.com/CEO:KIM JU HAN </span><br>
+        <span>TeamMember:SHIN JAE GU, LEE MIN SUNG, HONG SUN AH, KO JIN KYUNG/ADDRESS:인천광역시 미추홀구 ICIA Academy</span>
+    </footer>
+
+
+</body>
+<script>
+    $("#emptySpace").hide();
+    $("#searchBox").hide();
+
+    let ckboxck = true;
+
+    $("#T").hover(function () {
+        $('#tmenu>li').css('visibility', 'visible');
+        $('#T').css('background-color', 'black').css('color', 'white');
+
+    }, function () {
+        $('#tmenu>li').css('visibility', 'hidden');
+        $('#T').css('background-color', 'white').css('color', 'black');
+    });
+    $("#P").hover(function () {
+        $('#pmenu>li').css('visibility', 'visible');
+        $('#P').css('background-color', 'black').css('color', 'white');
+    }, function () {
+        $('#pmenu>li').css('visibility', 'hidden');
+        $('#P').css('background-color', 'white').css('color', 'black');
+    });
+    $("#L").hover(function () {
+        $('#lmenu>li').css('visibility', 'visible');
+        $('#L').css('background-color', 'black').css('color', 'white');
+    }, function () {
+        $('#lmenu>li').css('visibility', 'hidden');
+        $('#L').css('background-color', 'white').css('color', 'black');
+    });
+    $('#map').click(() => {
+        window.open('map.html', 'PopUp', "width: 500px, height: 500px, top: 10px, left: 50px")
+    });
+
+    function popUp() {
+        window.open('popup.html', 'PopUp', "width: 300px, height: 300px");
+    };
+
+
+    $('#look').click(() => {
+        if (ckboxck == true) {
+            $("#searchBox").show();
+            $("video").hide();
+            ckboxck = false;
+
+        } else if (ckboxck == false) {
+            $("#searchBox").hide();
+            $("video").show();
+            ckboxck = true;
+        }
+    });
+</script>
+
+</html>
