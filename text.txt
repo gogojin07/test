@@ -8,3 +8,4 @@ merge 확인
 테스트3
 테스트4 삭제
 
+merge test check check
