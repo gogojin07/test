@@ -1,0 +1,32 @@
+[33mcommit ed4c91110d088704c303087d15d2769fc5692349[m[33m ([m[1;36mHEAD -> [m[1;32mabc[m[33m, [m[1;31morigin/abc[m[33m)[m
+Author: gogojin07 <maru050112@gmail.com>
+Date:   Mon May 2 09:21:21 2022 +0900
+
+    commit test
+
+[33mcommit 1898051f1ae974d8d3baaf2c56941d1027f96623[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Merge: 104c19e 3ee3716
+Author: gogojin07 <80690807+gogojin07@users.noreply.github.com>
+Date:   Fri Apr 29 15:24:57 2022 +0900
+
+    Merge pull request #1 from gogojin07/gojin
+    
+    브랜치 테스트
+
+[33mcommit 3ee37164f42230c8fa188d68bb5d079148905657[m[33m ([m[1;31morigin/gojin[m[33m, [m[1;32mgojin[m[33m)[m
+Author: gogojin07 <maru050112@gmail.com>
+Date:   Fri Apr 29 14:47:07 2022 +0900
+
+    브랜치 테스트
+
+[33mcommit 104c19eb85e95a0c67fd42aa2d3ba03117949e37[m
+Author: gogojin07 <maru050112@gmail.com>
+Date:   Fri Apr 29 14:33:17 2022 +0900
+
+    테스트입니다.
+
+[33mcommit dabb323b979e8f04876b828286a49ea56142fa49[m
+Author: gogojin07 <maru050112@gmail.com>
+Date:   Fri Apr 29 13:13:36 2022 +0900
+
+    testtt
